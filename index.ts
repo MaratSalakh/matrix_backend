@@ -1,14 +1,12 @@
 import express from "express";
 import path from "path";
-import serverRoutes from "./routes/server.js";
+import serverRoutes from "./src/routes/server";
 
-const __dirname = path.resolve();
-
-const PORT = process.env.PORT ?? 3000;
+const PORT = process.env.PORT ?? 4200;
 const app = express();
 
 app.set("view engine", "ejs");
-app.set("views", path.resolve(__dirname, "ejs"));
+app.set("views", path.resolve(__dirname, "./src/ejs"));
 
 app.use(express.static(path.resolve(__dirname, "static")));
 
