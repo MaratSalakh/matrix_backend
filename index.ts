@@ -1,9 +1,9 @@
 import express from "express";
 import path from "path";
-import serverRoutes from "./src/routes/server";
+import serverRoutes from "./src/todo/todo.router";
 
 const PORT = process.env.PORT ?? 4200;
-const app = express();
+export const app = express();
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "./src/ejs"));
